@@ -1,0 +1,210 @@
+// =============================== Mixins
+@mixin generate-padding($values...) {
+    @each $value in $values {
+        .p-#{$value} {
+            padding: #{$value}px;
+        }
+        .pt-#{$value} {
+            padding-top: #{$value}px;
+        }
+        .pb-#{$value} {
+            padding-bottom: #{$value}px;
+        }
+        .pl-#{$value} {
+            padding-left: #{$value}px;
+        }
+        .pr-#{$value} {
+            padding-right: #{$value}px;
+        }
+    }
+}
+
+@mixin generate-margin($values...) {
+    @each $value in $values {
+        .m-#{$value} {
+            margin: #{$value}px;
+        }
+        .mt-#{$value} {
+            margin-top: #{$value}px;
+        }
+        .mb-#{$value} {
+            margin-bottom: #{$value}px;
+        }
+        .ml-#{$value} {
+            margin-left: #{$value}px;
+        }
+        .mr-#{$value} {
+            margin-right: #{$value}px;
+        }
+    }
+}
+
+@include generate-padding(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30);
+@include generate-margin(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30);
+// =============================== Flex
+.flex {
+    display: flex;
+}
+
+.c-row {
+    display: flex;
+    width: 100%;
+    flex-flow: row;
+}
+
+.c-column {
+    display: flex;
+    width: 100%;
+    flex-flow: column;
+}
+
+.nowrap {
+    flex-wrap: nowrap;
+}
+
+.wrap {
+    flex-wrap: wrap;
+}
+
+// =============================== justify content
+.jc-start {
+    justify-content: flex-start;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+.jc-sa {
+    justify-content: space-around;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+// =============================== align items
+.ai-start {
+    align-items: flex-start;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.ai-end {
+    align-items: flex-end;
+}
+
+// =============================== align self
+.as-start {
+    align-self: flex-start;
+}
+
+.as-center {
+    align-self: center;
+}
+
+.as-end {
+    align-self: flex-end;
+}
+
+.as-stretch {
+    align-self: stretch;
+}
+
+// =============================== padding / margin
+// .mt-15 {
+//     margin-top: 15px;
+// }
+// .mr-15 {
+//     margin-right: 15px;
+// }
+// .ml-15 {
+//     margin-left: 15px;
+// }
+// .mb-15 {
+//     margin-bottom: 15px;
+// }
+// .p-4 {
+//     padding: 4px;
+// }
+// =============================== cell
+.cell {
+    // display: flex;
+    flex: 1;
+}
+
+.cell-1,
+.cell-2,
+.cell-3,
+.cell-4,
+.cell-5,
+.cell-6,
+.cell-7,
+.cell-8,
+.cell-9,
+.cell-10,
+.cell-11,
+.cell-12 {
+    display: flex;
+    box-sizing: border-box;
+}
+
+.cell-1 {
+    width: calc(8.3333333333%);
+}
+
+.cell-2 {
+    width: calc(16.6666666667%);
+}
+
+.cell-3 {
+    width: calc(25%);
+}
+
+.cell-4 {
+    width: calc(33.3333333333%);
+}
+
+.cell-5 {
+    width: calc(41.6666666667%);
+}
+
+.cell-6 {
+    width: calc(50%);
+}
+
+.cell-7 {
+    width: calc(58.3333333333%);
+}
+
+.cell-8 {
+    width: calc(66.6666666667%);
+}
+
+.cell-9 {
+    width: calc(75%);
+}
+
+.cell-10 {
+    width: calc(83.3333333333%);
+}
+
+.cell-11 {
+    width: calc(91.6666666667%);
+}
+
+.cell-12 {
+    width: calc(100%);
+}
+
+// phone
+@media (max-width:479px) {}
+
+// tablet
+@media (min-width:480px) and (max-width:839px) {}
