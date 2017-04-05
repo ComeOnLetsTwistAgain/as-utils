@@ -6,7 +6,7 @@ module.exports = function (grunt) {
 
 		watch: {
 			sassWatch: {
-				files: "./src/style-utils/*.scss",
+				files: "./src/style/*.scss",
 				tasks: ["sass"]
 			},
 		},
@@ -14,10 +14,10 @@ module.exports = function (grunt) {
 		sass: {
 			dist: {
 				options: {
-					style: 'compressed'
+					style: 'expanded'
 				},
 				files: {
-					'dist/style-utils/style-utils.css': 'src/style-utils/master.scss'
+					'dist/style/style.css': 'src/style/master.scss'
 				}
 			}
 		},
