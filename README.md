@@ -7,3 +7,7 @@ Styles and other utils.
 + Added Roboto font
 + Added style to use font
 + Added media queries support for phone, tablet and desktop. Material style.
+
+## License
+
+MIT © [Antoine Souesme](mailto:antoine.souesme@gmail.com)

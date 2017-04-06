@@ -1,16 +1,26 @@
 {
-  "name": "as-utils",
-  "version": "0.0.2",
-  "description": "Styles and other utils.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "Antoine Souesme",
-  "license": "ISC",
-  "dependencies": {
-    "grunt": "^1.0.1",
-    "grunt-contrib-sass": "^1.0.0",
-    "grunt-contrib-watch": "^1.0.0" 
-  }
+	"name": "as-utils",
+	"version": "0.0.2",
+	"description": "Styles and other utils.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/ComeOnLetsTwistAgain/as-utils"
+	},
+	"author": {
+		"name": "Antoine Souesme",
+		"email": "antoine.souesme@gmail.com"
+	},
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/ComeOnLetsTwistAgain/as-utils/issues"
+	},
+	"dependencies": {
+		"grunt": "^1.0.1",
+		"grunt-contrib-sass": "^1.0.0",
+		"grunt-contrib-watch": "^1.0.0"
+	}
 }
