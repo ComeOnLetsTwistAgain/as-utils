@@ -15,3 +15,13 @@ body {
 .b2 {
     background-color: orange;
 }
+
+.bg-blue {
+	background-color: blue !important;
+}
+.bg-red {
+	background-color: red !important;
+}
+.bg-green {
+	background-color: green !important;
+}

@@ -40,7 +40,11 @@
 }
 
 @mixin generate-media-queries($mode) {
-    @for $i from 1 through 12 { // grid of 12
+    .cell-hide-#{$mode} {
+        display: none !important;
+    }
+    @for $i from 1 through 12 {
+        // grid of 12
         @if $mode=='desktop' {
             $value: #{($i * 8.333333333)};
             .cell-#{$i},
@@ -77,6 +81,17 @@
     }
 }
 
+@mixin generate-order($mode) {
+    @for $i from 1 through 12 {
+        .order-#{$i},
+        .order-#{$i}-#{$mode} {
+            -webkit-order: #{$i};
+            -ms-flex-order: #{$i};
+            order: #{$i};
+        }
+    }
+}
+
 // =============================== Padding generation
 @include generate-padding(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30);
 @include generate-margin(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 20, 25, 30);
@@ -87,13 +102,11 @@
 
 .c-row {
     display: flex;
-    width: 100%;
     flex-flow: row;
 }
 
 .c-column {
     display: flex;
-    width: 100%;
     flex-flow: column;
 }
 
@@ -165,8 +178,8 @@
     margin: 0 0 0 0;
 }
 
-.cell {
-    // display: flex;
+.cell,
+.spacer {
     flex: 1;
 }
 
@@ -186,18 +199,50 @@
     box-sizing: border-box;
 }
 
-// =============================== cell
+// =============================== Shadows
+.sha-2dp {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, .14), 0 3px 1px -2px rgba(0, 0, 0, .2), 0 1px 5px 0 rgba(0, 0, 0, .12)
+}
+
+.sha-3dp {
+    box-shadow: 0 3px 4px 0 rgba(0, 0, 0, .14), 0 3px 3px -2px rgba(0, 0, 0, .2), 0 1px 8px 0 rgba(0, 0, 0, .12)
+}
+
+.sha-4dp {
+    box-shadow: 0 4px 5px 0 rgba(0, 0, 0, .14), 0 1px 10px 0 rgba(0, 0, 0, .12), 0 2px 4px -1px rgba(0, 0, 0, .2)
+}
+
+.sha-6dp {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .14), 0 1px 18px 0 rgba(0, 0, 0, .12), 0 3px 5px -1px rgba(0, 0, 0, .2)
+}
+
+.sha-8dp {
+    box-shadow: 0 8px 10px 1px rgba(0, 0, 0, .14), 0 3px 14px 2px rgba(0, 0, 0, .12), 0 5px 5px -3px rgba(0, 0, 0, .2)
+}
+
+.sha-16dp {
+    box-shadow: 0 16px 24px 2px rgba(0, 0, 0, .14), 0 6px 30px 5px rgba(0, 0, 0, .12), 0 8px 10px -5px rgba(0, 0, 0, .2)
+}
+
+.sha-24dp {
+    box-shadow: 0 9px 46px 8px rgba(0, 0, 0, .14), 0 11px 15px -7px rgba(0, 0, 0, .12), 0 24px 38px 3px rgba(0, 0, 0, .2)
+}
+
+// =============================== Cell positions
 // Desktop and more
 @media (min-width: 840px) {
     @include generate-media-queries('desktop');
+    @include generate-order('desktop');
 }
 
 // Tablets
 @media (min-width:480px) and (max-width:839px) {
     @include generate-media-queries('tablet');
+    @include generate-order('tablet');
 }
 
 // Phones
 @media (max-width:479px) {
-	@include generate-media-queries('phone');
+    @include generate-media-queries('phone');
+    @include generate-order('phone');
 }

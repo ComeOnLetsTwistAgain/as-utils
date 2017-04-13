@@ -10,8 +10,35 @@
 </head>
 
 <body>
-	<div class="b1">
-			test
+	<h5>Current mode</h5>
+	<div class="cell-hide-phone cell-hide-tablet">Desktop</div>
+	<div class="cell-hide-phone cell-hide-desktop">Tablet</div>
+	<div class="cell-hide-tablet cell-hide-desktop">Phone</div>
+	<h5>Spacer</h5>
+	<div class="b1 sha-2dp c-row">
+		<div class="b2 cell-2 jc-center">test</div>
+		<div class="b2 cell-3 jc-center">test</div>
+		<div class="spacer"></div>
+		<div class="b2 cell-2 jc-end">test</div>
+	</div>
+	<h5>Alignment and spacing</h5>
+	<div class="b1 sha-2dp c-row mt-15 jc-sb">
+		<div class="b2 cell-3 jc-center">test</div>
+		<div class="b2 cell-3 jc-center">test</div>
+		<div class="b2 cell-3 jc-center">test</div>
+	</div>
+	<h5>Warping and size tests (resize browser)</h5>
+	<div class="b1 sha-2dp c-row mt-15 wrap">
+		<div class="b2 cell-4">test</div>
+		<div class="b2 cell-4">test</div>
+		<div class="b2 cell-4">test</div>
+		<div class="b2 cell-4 cell-12-tablet cell-hide-phone">test</div>
+	</div>
+	<h5>Order</h5>
+	<div class="b1 sha-2dp c-row mt-15 wrap">
+		<div class="b2 cell-4 jc-center order-1-phone order-2-tablet order-3-desktop bg-blue">first on phone</div>
+		<div class="b2 cell-4 jc-center order-2-phone order-3-tablet order-1-desktop bg-red">first on desktop</div>
+		<div class="b2 cell-4 jc-center order-3-phone order-1-tablet order-2-desktop bg-green">first on tablet</div>
 	</div>
 </body>
 
