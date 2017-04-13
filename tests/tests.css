@@ -1,0 +1,17 @@
+body {
+    font-family: Roboto;
+}
+
+.b1,
+.b2 {
+    color: white;
+    padding: 6px;
+}
+
+.b1 {
+    background-color: purple;
+}
+
+.b2 {
+    background-color: orange;
+}

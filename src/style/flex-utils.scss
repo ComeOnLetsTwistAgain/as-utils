@@ -40,7 +40,7 @@
 }
 
 @mixin generate-media-queries($mode) {
-    @for $i from 1 through 12 {
+    @for $i from 1 through 12 { // grid of 12
         @if $mode=='desktop' {
             $value: #{($i * 8.333333333)};
             .cell-#{$i},
